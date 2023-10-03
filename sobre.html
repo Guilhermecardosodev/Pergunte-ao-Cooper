@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o Projeto</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Estilos para a caixa com barra de rolagem */
+        .code-container {
+            display: flex;
+            flex-direction: column; /* Altera a direção do flex para coluna */
+            align-items: center; /* Centraliza as caixas horizontalmente */
+        }
+    
+        .code-box {
+            width: 50%;
+            overflow: auto;
+            border: 1px solid #b92929;
+            padding: 10px;
+            background-color: #050505;
+            border-radius: 10px;
+            margin: 10px;
+            position: relative; /* Adiciona uma posição relativa para conter a imagem */
+        }
+    
+        .code-scroll {
+            max-height: 100px; /* Altura máxima para a barra de rolagem */
+        }
+    
+        .code-image {
+            width: 100%; /* Ocupa 100% da largura da caixa de código */
+            height: auto; /* Altura automática, para manter a proporção */
+            object-fit: cover; /* Mantém a proporção da imagem e a ajusta para caber na caixa */
+            opacity: 1; /* Opacidade da imagem (opcional) */
+        }
+
+        .neon-text {
+            font-size: 36px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #0e1010, #000000, #020202);
+            background-size: 200% 200%;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: neonAnimation 2s linear infinite, shadowAnimation 2s linear infinite alternate;
+        }
+
+        @keyframes neonAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        @keyframes shadowAnimation {
+            0% {
+                text-shadow: 0 0 10px rgb(250, 223, 17);
+            }
+            100% {
+                text-shadow: 0 0 20px rgb(9, 8, 9);
+            }
+        }
+    </style>
+    
+</head>
+<body>
+
+    <audio id="myAudio">
+        <source src="seu_arquivo_de_audio.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+      </audio>
+      
+    <div class="container">
+        <!-- Área do banner (substitua a imagem) -->
+        <div class="banner">
+            <img src="seu_novo_banner.jpg" alt="Banner desta página"> 
+        </div>
+
+        <!-- Barra de botões abaixo do banner -->
+        <div class="button-bar">
+            <a href="index.html" class="button neon-pulse">Início</a>
+        </div>
+
+        <br>
+        <h1 class="button neon-pulse">Sobre o Projeto</h1>
+
+        <div>
+            <p class="neon-text">Olá!
+                <br>
+                Aqui iremos compreender como funciona nosso projeto.<br>
+                Nossa página foi escrita em <b><span class="button neon-pulse">HTML, CSS e JavaScript</span></b>,
+                fazendo referência ao personagem Sheldon Cooper da série Big Bang Theory.
+                <br>
+                Nessa série, o personagem interpretado por Jim Parson é um gênio da física, 
+                que com seus amigos, protagonizam o sitcom de grande sucesso.
+                <br><br>
+                <b><span class="button neon-pulse"><span style="font-size: 27px;">Vamos lá!</span></b> ou melhor:
+
+                <!--button onclick="playAudio()" class="button neon-pulse">Bazinga!</button-->
+                <iframe width="100" height="100" src="https://www.myinstants.com/instant/bazinga/embed/" frameborder="0" scrolling="no">Clique!</iframe>
+
+                
+            </p>
+            <hr>
+            <br>
+        </div>
+
+        <!-- Espaços para códigos com imagens -->
+        <div class="code-container">
+            <h2> Abaixo poderemos analizar cada etapa da criação da página.</h2>
+            
+            <!-- Primeiro código com barra de rolagem e imagem -->
+            <div class="code-box">
+                <h2></h2>
+                <div class="code-scroll">
+                    <pre>
+                        <!-- Seu código aqui -->
+                    </pre>
+                </div>
+                <img class="code-image" src="indexcode.png" alt="Imagem 1">
+            </div>
+            
+            <ol class="custom-list">
+                <li>A estrutura básica da página:</li>
+                <ul>
+                    <li>Html - Define o início de um documento HTML.</li>
+                    <li>head - Contém informações sobre o documento, como título e metadados.</li>
+                    <li>meta charset - Define o conjunto de caracteres universal UTF-8 para a página.</li>
+                    <li>meta name - Configura a viewport para dispositivos móveis.</li>
+                    <li>title - Define o título da página exibido na aba do navegador.</li>
+                    <li>link rel - Importa uma folha de estilo externa chamada "styles.css".</li>
+                    <li>style - Permite a inclusão de estilos CSS diretamente no documento HTML.</li>
+                    <li>body - Contém o conteúdo visível da página.</li>
+                </ul>
+            </ol>
+            <hr>
+
+            <h3>Nessa área temos o CSS ditando a estilização da página.</h3>
+            <!-- Segundo código com barra de rolagem e imagem -->
+            <div class="code-box">
+                <h2></h2>
+                <div class="code-scroll">
+                    <pre>
+                        <!-- Seu código aqui -->
+                    </pre>
+                </div>
+                <img class="code-image" src="csscode.png" alt="Imagem 2">
+            </div>
+
+            <ol class="custom-list">
+                <li>A estrutura básica do CSS:</li>
+                <ul>
+                    <li>neon-text - Uma classe CSS que estiliza o texto com efeito gradiente neon e sombra. Ela define o tamanho da fonte, a cor do texto como transparente (para que o gradiente apareça), o uso de background-clip para aplicar o gradiente ao texto e animações para criar os efeitos de gradiente e sombra.</li>
+                    <li>code-container -</li>
+                    <li>code-box -</li>
+                    <li>code-image -</li>
+                    <li>code-scroll -</li>
+                    <li>Os códigos acima são classes CSS usadas para estilizar as caixas de código com imagens. Elas controlam o layout, a aparência e a posição das imagens dentro das caixas de código.</li>
+                    <li>Keyframes neonAnimation - Define uma animação chamada "neonAnimation" que cria o efeito de gradiente neon. Ele altera a posição de fundo do gradiente de 0% para 100%, criando uma animação de movimento de gradiente.</li>
+                    <li>Keyframes shadowAnimation - Define uma animação chamada "shadowAnimation" que cria o efeito de sombra intermitente no texto. Ela altera a propriedade text-shadow para criar a animação de piscar.</li>
+                </ul>
+            </ol>
+            <hr>
+
+            <h4>Aqui, sequencialmente, temos o JavaScript!</h4>
+            <!-- Terceiro código com barra de rolagem e imagem -->
+            <div class="code-box">
+                <h2></h2>
+                <div class="code-scroll">
+                    <pre>
+                        <!-- Seu código aqui -->
+                    </pre>
+                </div>
+                <img class="code-image" src="jscode.png" alt="Imagem 3">
+            </div>
+
+            <ol class="custom-list">
+                <li>A estrutura básica do JavaScript:</li>
+                <ul>
+                    <li>Seleção de elementos DOM</li>
+                    <ul>
+                        <li>Neste trecho de código abaixo, o código está selecionando elementos do DOM (Document Object Model) usando `document.getElementById()` e armazenando-os em variáveis para uso posterior. Os elementos selecionados são:</li>
+                        <ul>
+                            <li>searchForm - O elemento com o ID "search-form", que é o formulário de pesquisa.</li>
+                            <li>searchInput - O elemento com o ID "search-input", que é a caixa de entrada de pesquisa.</li>
+                            <li>searchResults - O elemento com o ID "search-results", que é a lista de resultados de pesquisa.</li>
+                            <li>clearButton - O elemento com o ID "clear-button", que é o botão para limpar a pesquisa.</li>
+                        </ul>
+                    </ul>
+                </ul>
+                <img class="code-image" src="js1.png" alt="Imagem js1">
+                <li>Evento de envio de Formulário</li>
+                <ul>
+                    <li>Este trecho de código abaixo adiciona um ouvinte de evento ao formulário de pesquisa (elemento searchForm) para o evento "submit". Quando o formulário é enviado, a função callback é chamada.</li>
+                    <li>`e.preventDefault()` - Isso impede o comportamento padrão de envio do formulário, que faria com que a página fosse recarregada.</li>
+                    <li>`performSearch()` - Chama a função `performSearch()` para executar a pesquisa.</li>
+                </ul>
+                <img class="code-image" src="js2.png" alt="Imagem js2">
+                <li>Evento de Tecla Pressionada na Caixa de Entrada</li>
+                <ul>
+                    <li>Este trecho de código abaixo adiciona um ouvinte de evento à caixa de entrada de pesquisa (elemento searchInput) para o evento "keydown" (quando uma tecla é pressionada).</li>
+                    <li>Ele verifica se a tecla pressionada é a tecla "Enter" (código de tecla "Enter" é igual a "Enter").</li>
+                    <li>Se a tecla "Enter" for pressionada, a função callback é chamada.</li>
+                    <li>`e.preventDefault()` - Novamente, isso impede o comportamento padrão de submissão do formulário.</li>
+                    <li>`performSearch()` - Chama a função `performSearch()` para executar a pesquisa.</li>
+                </ul>
+                <img class="code-image" src="js3.png" alt="Imagem js3">
+                <li>Evento de Clique no Botão de Limpar</li>
+                <ul>
+                    <li>Este trecho abaixo de código adiciona um ouvinte de evento ao botão de limpar (elemento clearButton) para o evento "click" (quando o botão é clicado).</li>
+                    <li>Quando o botão é clicado, a função callback é chamada.</li>
+                    <li>`searchInput.value = "";` - Isso limpa o conteúdo da caixa de entrada de pesquisa, definindo seu valor como uma string vazia.</li>
+                    <li>`hideSearchResults();` - Chama a função `hideSearchResults()` para ocultar a lista de resultados de pesquisa.</li>
+                </ul>
+                <img class="code-image" src="js4.png" alt="Imagem js4">
+                <li>Função `performSearch()`</li>
+                <ul>
+                    <li>A função `performSearch()` é responsável por executar a pesquisa.</li>
+                </ul>
+                <img class="code-image" src="js5.png" alt="Imagem js5">
+            </ol>
+            <hr>
+
+            <h5><span class="button neon-pulse"><b>OBS:</b></span> Foi um projeto estimulante; entretanto, devo dizer que mostrou como o Front-end é complexo e cheio de possibilidades.
+                <br><br>Vida longa e próspera!</h5>
+        </div>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://github.com/Guilhermecardosodev" class="social-icon"><img src="github.png" alt="git"></a>
+        <a href="https://www.linkedin.com/in/guilhermecardosodev/" class="social-icon"><img src="linkedin.png" alt="lnkdn"></a>
+        <a href="https://api.whatsapp.com/send?phone=5511966310929" class="social-icon"><img src="zap.png" alt="whats"></a>
+    </div>
+
+    <script>
+        function playAudio() {
+          var audio = document.getElementById("myAudio");
+          audio.play();
+        }
+      </script>
+      
+    
+    <footer style="text-align: center; background: url('footer.jpg') repeat; color: white; padding: 1rem;">
+       <p>&copy; 2023 Pergunte ao Cooper. Todos os direitos reservados.</p>
+       developed by <span style="color: #FF0000; font-family: 'Arial', sans-serif; font-size: 15px;">White_Mouse_dev</span>
+   </footer>
+</body>
+</html>

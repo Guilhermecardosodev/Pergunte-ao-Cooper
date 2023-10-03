@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('fisica.jpg'); /* Substitua 'background.jpg' pelo caminho da sua imagem */
+    background-size: cover; /* Para cobrir toda a área visível da página */
+    background-repeat: repeat; /* Para evitar repetição da imagem */
+    background-attachment:fixed; /* Fixa a imagem de fundo para que ela não role com a página */
+    /* Outros estilos, como cores de texto e links, podem ser adicionados aqui */
+}
+h1 {
+    text-align: center;
+}
+
+.container {
+    background-color: rgba(241, 240, 240, 0.9); /* Cor de fundo do contêiner principal */
+    /* Outros estilos para o contêiner principal */
+}
+.search-container {
+    text-align: center;
+    margin: 100px auto;
+    max-width: 600px;
+}
+
+#search-input {
+    width: 80%;
+    padding: 50px;
+    font-size: 20px;
+}
+
+#search-results {
+    list-style-type:none;
+    padding: 10px;
+    border: 1px solid #030303;
+    border-radius: 5px;
+    max-height: 500px;
+    overflow-y: auto;
+    display:flexbox;
+}
+
+#search-results li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#search-results li:hover {
+    background-color: #f0f0f0;
+}
+
+.search-results-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.search-results-list li {
+    margin: 10px 0;
+}
+
+.search-results-list a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.search-results-list a:hover {
+    text-decoration: underline;
+}
+
+
+/* Centralize os botões horizontalmente no formulário */
+#search-form {
+    text-align: center;
+}
+
+/* Defina um espaço entre os botões, se necessário */
+#search-button,
+#clear-button {
+    margin: 0 10px; /* Isso adiciona um espaço de 5px entre os botões */
+}
+
+
+
+/* Estilos para o botão de busca */
+#search-button {
+    background-color: #e33838;
+    color: #ea3c3c;
+    border:#00C49F;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-top: 5px;
+    border: 1px solid #010101;
+    /* Adicione outros estilos personalizados aqui */
+}
+
+/* Estilos para o botão de busca ao passar o mouse (hover) */
+#search-button:hover {
+    background-image: linear-gradient(45deg, #007BFF, #00C49F);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Adicione outros estilos de hover personalizados aqui */
+}
+
+#clear-button {
+    background-color: #faed00;
+    color: #ea3c3c;
+    border:#00C49F;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-top: 5px;
+    border: 1px solid #010101;
+    /* Adicione outros estilos personalizados aqui */
+}
+
+#clear-button:hover {
+    background-image: linear-gradient(45deg, #007BFF, #00C49F);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Adicione outros estilos de hover personalizados aqui */
+}
+
+/* Estilos para a área do banner */
+.banner {
+    text-align:center;
+    background-color: #000000; /* Cor de fundo do banner */
+    padding: 1px;
+
+}
+
+.banner img {
+    width: 100%;
+    height: 500px;
+}
+
+/* Estilos para a barra de botões */
+.button-bar {
+    background-image:url('footer.jpg'); /* usei a mesma imagem do footer */
+    text-align: left;
+    padding: 10px;
+}
+
+.button-bar .button {
+    margin: 2px;
+    padding: 5px 20px;
+    color: #04dff3;
+    text-decoration: none;
+    background-color: #1f1f1f; /* Cor de fundo dos botões */
+    border-radius: 4px;
+}
+.button:hover {
+    background-image: linear-gradient(45deg, #0a1d10, #a8c4bf); /* Efeito de fundo neon ao passar o mouse */
+}
+
+.button.neon-pulse {
+    animation: neonPulse 3s infinite alternate; 
+    /* a configuração esta na neon text */
+}
+
+
+
+
+.social-icons {
+    position: fixed;
+    bottom: 20px; /* Ajuste essa propriedade para controlar a distância do fundo da página */
+    right: 20px; /* Ajuste essa propriedade para controlar a distância da borda direita da página */
+    display: flex;
+    justify-content: flex-end; /* Alinha os ícones à direita */
+}
+
+.social-icon {
+    margin-left: 10px; /* Adicione espaço entre os ícones */
+}
+
+
+
+
+
+/* Estilo do texto com efeito neon */
+.neon-text {
+    font-size: 36px; /* Tamanho do texto */
+    font-weight: bold; /* Peso da fonte */
+    color: #080808; /* Cor do texto */
+    text-shadow: 0 0 30px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.7);
+    animation: neonPulse 3s infinite; /* Animação de pulsação do efeito neon */
+}
+
+/* Animação de pulsação do efeito neon */
+@keyframes neonPulse {
+    0% {
+        text-shadow: 0 0 50px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.7);
+    }
+    50% {
+        text-shadow: none;
+    }
+    100% {
+        text-shadow: 0 0 50px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.7);
+    }
+}
+
+/* Estilo inicial dos ícones de redes sociais */
+.social-icon img {
+    width: 40px; /* Tamanho das imagens */
+    height: auto;
+    transition: filter 0.3s ease-in-out; /* Efeito de transição suave */
+}
+
+/* Efeito de hover que aplica o efeito neon */
+.social-icon:hover img {
+    filter: brightness(5); /* Aumenta o brilho quando o mouse está sobre o ícone */
+}
+
+
+.red-letter {
+    color: red;
+}
+
+.blue-letter {
+    color: blue;
+}
+.amarelo-letter {
+    color: rgb(248, 248, 8);
+}
+.verde-letter {
+    color: rgb(13, 239, 96);
+}
+
+
+.custom-list {
+    list-style-type: disc;
+}
